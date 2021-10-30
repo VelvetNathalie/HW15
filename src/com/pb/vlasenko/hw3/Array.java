@@ -9,6 +9,7 @@ import java.util.Arrays;
             Scanner scanner = new Scanner(System.in);
             System.out.println("Введите целое число: ");
 
+
             for (int i = 0; i < mas.length; i++)
                 mas[i] = scanner.nextInt();
             System.out.println("Введены следующие числа: ");
