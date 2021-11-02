@@ -5,18 +5,18 @@ public class Book {
     private String name;
     private String date;
 
-   // private static int bookCount = 0;
-    //private static int getBookCountCount = 0;
+    private static int bookCount = 0;
+    private static int getBookCountCount = 0;
 
     public void setAvtor(String avtor) {
         this.avtor = avtor;
     }
 
-    public void setName(String name) {
+   public void setName(String name) {
         this.name = name;
-    }
+   }
 
-    public void setDate(String date) {
+  public void setDate(String date) {
         this.date = date;
     }
 
@@ -29,7 +29,7 @@ public class Book {
     }
 
     public String getDate() {
-        return date;
+       return date;
     }
 
     String getinfo(){

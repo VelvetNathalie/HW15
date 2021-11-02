@@ -2,9 +2,10 @@ package com.pb.vlasenko.HW5;
 
 public class Library {
     public static void main(String[] args) {
-        Book book1 = new Book();
-        Book book2 = new Book();
-        Book book3 = new Book();
+        Book book1=new Book();
+        Book book2=new Book();
+        Book book3=new Book();
+
         book1.setAvtor("Иванов И. И.");
         book2.setAvtor("Сидоров А. В");
         book3.setAvtor("Гусев К. В");
@@ -29,10 +30,9 @@ public class Library {
         reader2.setPhone("+380673256558");
         reader3.setFullname("Диана Маш");
         reader3.setDateofbirth("25.03.2008");
-        reader3.setFaculty("Филология") ;
-        reader3.setNumberofticket(3) ;
-        reader3.setPhone("+380675462547") ;
-
+        reader3.setFaculty("Филология");
+        reader3.setNumberofticket(3);
+        reader3.setPhone("+380675462547");
 
 
         System.out.println(book1.getinfo());
@@ -45,9 +45,18 @@ public class Library {
 
         reader1.takeBook(reader1.getFullname());
 
-        reader1.takeBook(reader1.getFullname()+book1.getName()+ book2.getName() + book3.getName());
+        reader1.takeBook(reader1.getFullname()+" взял книги: "+book1.getName()+", "+ book2.getName()+", " + book3.getName()+". ");
 
-        reader1.takeBook (reader1.getFullname()+" взял книги: "+ book1.getName() +"("+book1.getAvtor()+" "+book1.getDate()+"), "
-               +book2.getName() +"("+book2.getAvtor()+" "+book2.getDate()+"), "+book3.getName() +"("+book3.getAvtor()+" "+book3.getDate()+").");
+        reader1.takeBook(reader1.getFullname()+" взял книги: "+book1.getName()+", "+ book2.getName()+", " + book3.getName()+". ");
+
+        reader1.takeBook(reader1.getFullname() + " взял книги: " + book1.getName() + "(" + book1.getAvtor() + " " + book1.getDate() + "), "
+                + book2.getName() + "(" + book2.getAvtor() + " " + book2.getDate() + "), " + book3.getName() + "(" + book3.getAvtor() + " " + book3.getDate() + ").");
+
+        reader1.returnBook(reader1.getFullname());
+
+        reader1.returnBook(reader1.getFullname()+" вернул книги: "+book1.getName()+", "+ book2.getName()+", " + book3.getName()+". ");
+
+        reader1.returnBook(reader1.getFullname() + " вернул книги: " + book1.getName() + "(" + book1.getAvtor() + " " + book1.getDate() + "), "
+                + book2.getName() + "(" + book2.getAvtor() + " " + book2.getDate() + "), " + book3.getName() + "(" + book3.getAvtor() + " " + book3.getDate() + ").");
     }
 }

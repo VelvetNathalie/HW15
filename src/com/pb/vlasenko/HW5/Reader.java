@@ -51,28 +51,43 @@ public class Reader {
     }
 
 
-    String getinfo(){
+    String getinfo() {
         return "[ФИО: " + fullname + ", номер читательского билета " + numberofticket +
-                ", факультет " + faculty + ", дата рождения " + dateofbirth + ", телефон " + phone+"]";
+                ", факультет " + faculty + ", дата рождения " + dateofbirth + ", телефон " + phone + "]";
     }
 
-    public void takeBook(String fullname)
+    public void takeBook(String fullname) {
+        System.out.println(fullname + " взял 3 книги.");
+        return;
+
+    }
+
+    public void takeBook( String name,String fullname)
     {
-        System.out.println( fullname + " взял 3 книги.");
-
+        System.out.println(fullname + "взял книги: " + name + ", " + name + ", " + name + ".");
     }
-    public void takeBook(String fullname, String name)
+
+    public void takeBook(String fullname, String name, String avtor, String date)
     {
-        System.out.println( fullname +
-                " взял книги:"+name+", "
-                + name+", " + name+".");
+        System.out.println(fullname + " взял книги: " +
+                name +", "+ avtor +", "+ date+", " + name +", "+ avtor +", "+ date +", "+ name+", " + avtor+", " + date +". ");
+
     }
 
-    public void takeBook(String fullname, String name, String avtor,String date)
+    public void returnBook(String fullname)
     {
-        System.out.println( fullname + " взял книги: " +
-               name +avtor+date + name + avtor + date+ name + avtor+date);
+        System.out.println(fullname + " вернул 3 книги.");
+    }
+
+    public void returnBook(String fullname, String name, String avtor, String date)
+    {
+        System.out.println(fullname + " вернул книги: " +
+                name +", "+ avtor +", "+ date+", " + name +", "+ avtor +", "+ date +", "+ name+", " + avtor+", " + date +". ");
 
     }
-   // public void returnBook()
+
+    public void returnBook(String fullname, String name)
+    {
+        System.out.println(fullname + "вернул книги: " + name + ", " + name + ", " + name + ".");
+    }
 }
