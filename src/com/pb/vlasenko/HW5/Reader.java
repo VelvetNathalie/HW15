@@ -61,9 +61,11 @@ public class Reader {
         System.out.println( fullname + " взял 3 книги.");
 
     }
-    public void takeBook (String fullname, String name)
+    public void takeBook(String fullname, String name)
     {
-        System.out.println( fullname + " взял книги:"+ name);
+        System.out.println( fullname +
+                " взял книги:"+name+", "
+                + name+", " + name+".");
     }
 
     public void takeBook(String fullname, String name, String avtor,String date)
@@ -72,4 +74,5 @@ public class Reader {
                name +avtor+date + name + avtor + date+ name + avtor+date);
 
     }
+   // public void returnBook()
 }

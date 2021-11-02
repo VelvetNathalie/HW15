@@ -45,7 +45,7 @@ public class Library {
 
         reader1.takeBook(reader1.getFullname());
 
-        reader1.takeBook(reader1.getFullname() +" взял книги: "+ book1.getName()+", " + book2.getName()+", " + book3.getName()+".");
+        reader1.takeBook(reader1.getFullname()+book1.getName()+ book2.getName() + book3.getName());
 
         reader1.takeBook (reader1.getFullname()+" взял книги: "+ book1.getName() +"("+book1.getAvtor()+" "+book1.getDate()+"), "
                +book2.getName() +"("+book2.getAvtor()+" "+book2.getDate()+"), "+book3.getName() +"("+book3.getAvtor()+" "+book3.getDate()+").");
