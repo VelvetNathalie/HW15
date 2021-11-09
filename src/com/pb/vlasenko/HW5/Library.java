@@ -27,28 +27,28 @@ public class Library {
         System.out.println(readers[2].getinfo());
 
 
-        readers[0].takeBook(readers[2].getBookCount());
-        readers[1].takeBook(readers[0].getBookCount());
-        readers[2].takeBook(readers[1].getBookCount());
+        readers[0].takeBook(3);
+        readers[1].takeBook(2);
+        readers[2].takeBook(1);
 
 //2
 
-      readers[2].takeBook(books[0].getName()+", "+"\n"+ books[2].getName()+", " + books[1].getName() +". ");
+      readers[2].takeBook(" Приключения "," Словарь "," Энциклопедия ");
 
 
 //3
-       readers[1].takeBook(books[0].getinfo()+", "+"\n"+ books[1].getinfo()+", " + books[2].getinfo()+". ");
+       readers[1].takeBook(books[1],books[2],books[0]);
 
 
 
-        readers[0].returnBook(readers[0].getBookCount());
-        readers[1].returnBook(readers[1].getBookCount());
-        readers[2].returnBook(readers[2].getBookCount());
+        readers[0].returnBook(3);
+        readers[1].returnBook(2);
+        readers[2].returnBook(1);
 
-        readers[2].returnBook(books[0].getName()+", "+"\n"+ books[2].getName()+", " + books[1].getName() +". ");
+        readers[2].returnBook(" Приключения "," Словарь "," Энциклопедия ");
 
 
-        readers[1].returnBook(books[0].getinfo()+", "+ "\n"+books[1].getinfo()+", " + books[2].getinfo()+". ");
+        readers[1].returnBook(books[1],books[2],books[0]);
 
     }
 }
