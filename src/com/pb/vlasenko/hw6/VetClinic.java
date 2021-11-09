@@ -69,11 +69,9 @@ public class VetClinic {
         Constructor constr = veterinarClazz.getConstructor(new Class[]{});
         Object obj = constr.newInstance();
         if (obj instanceof Veterinarian) {
-            for (int i = 0; i < animals.length; i++) ;
-            {
-                ((Veterinarian) obj).treatAnimal(animals[2]);
-                ((Veterinarian) obj).treatAnimal(animals[1]);
-                ((Veterinarian) obj).treatAnimal(animals[0]);
+            for (int i = 0; i < animals.length; i++) {
+                ((Veterinarian) obj).treatAnimal(animals[i]);
+
 
             }
 
