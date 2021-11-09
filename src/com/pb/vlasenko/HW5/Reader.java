@@ -1,12 +1,32 @@
 package com.pb.vlasenko.HW5;
 
+import com.pb.vlasenko.hw3.Array;
+
+import javax.naming.Name;
+
 public class Reader {
     private String fullname;
     private int numberofticket;
     private String faculty;
     private String dateofbirth;
 
+    private static int bookCount = 0;
 
+    public Reader(String fullname, int numberofticket, String faculty, String dateofbirth, String phone) {
+        this.fullname = fullname;
+        this.numberofticket = numberofticket;
+        this.faculty = faculty;
+        this.dateofbirth = dateofbirth;
+        this.phone = phone;
+    }
+
+    public static int getBookCount() {
+        return bookCount;
+    }
+
+    public static void setBookCount(int bookCount) {
+        Reader.bookCount = bookCount;
+    }
 
     public void setFullname(String fullname) {
         this.fullname = fullname;
@@ -56,38 +76,39 @@ public class Reader {
                 ", факультет " + faculty + ", дата рождения " + dateofbirth + ", телефон " + phone + "]";
     }
 
-    public void takeBook(String fullname) {
-        System.out.println(fullname + " взял 3 книги.");
+    public void takeBook(int bookCount) {
+        if (true)
+            bookCount++;
+        for (int i = 0; i< bookCount; i++) {
+
+        System.out.println (fullname+" взял "+ bookCount +" книг");
         return;
-
+    }}
+    public void takeBook (String name,String... bookNames)
+    {for (String getName:bookNames);
+        { System.out.println(fullname+" взял книги: "+ name) ;}
     }
 
-    public void takeBook( String name,String fullname)
-    {
-        System.out.println(fullname + "взял книги: " + name + ", " + name + ", " + name + ".");
+    public void takeBook(Book... books)
+     {
+      System.out.println(" взял книги: "+ books);}
+
+
+
+    public void returnBook(int bookCount)
+    {if (true)
+        bookCount++;
+        for (int i = 0; i< bookCount; i++)
+        {System.out.println(fullname+"  вернул "+ bookCount +". ");
+    }}
+
+    public void returnBook (String name,String... bookNames)
+    {for (String getName:bookNames);
+        { System.out.println(fullname+" вернул книги: "+ name) ;}
     }
 
-    public void takeBook(String fullname, String name, String avtor, String date)
-    {
-        System.out.println(fullname + " взял книги: " +
-                name +", "+ avtor +", "+ date+", " + name +", "+ avtor +", "+ date +", "+ name+", " + avtor+", " + date +". ");
+    public void returnBook(Book... books)
+   // {for (Book[] book:books);}
+    {System.out.println(fullname+" вернул книги: "+ getinfo());}
 
-    }
-
-    public void returnBook(String fullname)
-    {
-        System.out.println(fullname + " вернул 3 книги.");
-    }
-
-    public void returnBook(String fullname, String name, String avtor, String date)
-    {
-        System.out.println(fullname + " вернул книги: " +
-                name +", "+ avtor +", "+ date+", " + name +", "+ avtor +", "+ date +", "+ name+", " + avtor+", " + date +". ");
-
-    }
-
-    public void returnBook(String fullname, String name)
-    {
-        System.out.println(fullname + "вернул книги: " + name + ", " + name + ", " + name + ".");
-    }
 }

@@ -5,8 +5,6 @@ public class Book {
     private String name;
     private String date;
 
-    private static int bookCount = 0;
-    private static int getBookCountCount = 0;
 
     public void setAvtor(String avtor) {
         this.avtor = avtor;
@@ -33,6 +31,12 @@ public class Book {
     }
 
     String getinfo(){
-        return "[Автор: " + avtor + ", название " + name + ", год издания " + date + "]";
+        return "Hазвание " + "'' " +name + " '' " + "( автор: " + avtor+ ", год издания: " + date + ") ";
+    }
+
+    public Book(String avtor, String name, String date) {
+        this.avtor = avtor;
+        this.name = name;
+        this.date = date;
     }
 }
