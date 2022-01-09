@@ -1,0 +1,25 @@
+package com.pb.vlasenko.HW14;
+
+import java.io.IOException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class Main {
+
+    public static void main(String[] args) throws IOException, InterruptedException {
+
+
+        ExecutorService exec = Executors.newFixedThreadPool(10);
+        int j = 0;
+
+
+        while (j < 10) {
+            j++;
+            exec.execute(new TestRunnableClientTester());
+            Thread.sleep(10);
+        }
+
+
+        exec.shutdown();
+    }
+}

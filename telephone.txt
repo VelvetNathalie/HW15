@@ -1,0 +1,2 @@
+[Person{name='wwww', phone='3333', dateOfBirth=2000-02-12, adress='rrrr'} 
+ ]
